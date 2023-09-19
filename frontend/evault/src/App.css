@@ -143,3 +143,7 @@ h1, h2 {
   justify-content: space-between;
 }
 
+.centerflex{
+  display: flex;
+  justify-content: center;
+}
