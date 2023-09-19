@@ -19,7 +19,7 @@ export default function Metaconnect() {
         }
         else {
             if (window.ethereum) {
-                window.ethereum.disconnect();
+
                 window.ethereum.request({ method: 'eth_requestAccounts' })
                     .then(result => {
                         accountChanged([result[0]])
@@ -39,7 +39,8 @@ export default function Metaconnect() {
         }
         else {
             if (window.ethereum) {
-                window.ethereum.request({ method: 'eth_requestAccounts' })
+
+                window.ethereum.request({ method: 'eth_requestAccounts', method: 'disconnect' })
                     .then(result => {
                         accountChanged([])
                     })
