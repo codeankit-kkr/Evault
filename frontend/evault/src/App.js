@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Sign from './components/Sign';
 import Login from './components/Login';
+import Metaconnect from './components/Metaconnect';
 function App() {
   return (
     <div className='main_app'>
@@ -13,6 +14,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/signup' element={<Sign />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/connectmeta' element={<Metaconnect />} />
         </Routes>
       </Router>
     </div>
