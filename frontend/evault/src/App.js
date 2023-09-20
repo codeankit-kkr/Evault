@@ -6,7 +6,10 @@ import Home from './components/Home';
 import Sign from './components/Sign';
 import Login from './components/Login';
 import Metaconnect from './components/Metaconnect';
-import LoggedinPage from './components/LoggedinPage';
+import HomeLayout from './components/HomeLayout';
+import Profile from './components/Profile';
+import FAQ from './components/FAQ';
+import FileUpload from './components/FilesUpload';
 
 
 function App() {
@@ -19,7 +22,11 @@ function App() {
           <Route path='/signup' element={<Sign />} />
           <Route path='/login' element={<Login />} />
           <Route path='/connectmeta' element={<Metaconnect />} />
-          <Route path='/loggedin' element={<LoggedinPage />} />
+          <Route path='/loggedin' element={<HomeLayout />} >
+            <Route index element={<Profile />} />
+            <Route path='faq' element={<FAQ />} />
+            <Route path='fileupload' element={<FileUpload />} />
+          </Route>
         </Routes>
       </Router>
     </div>

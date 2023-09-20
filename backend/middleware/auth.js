@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken")
 const legalfiles = require("../models/Legalfiles")
 
+
 const auth = async (req, res, next) => {
     try {
         const token = req.cookies.jwt;
@@ -8,7 +9,6 @@ const auth = async (req, res, next) => {
         console.log(verifyUser);
         const user = await legalfiles.findOne({ _id: verifyUser._id });
         console.log(user);
-
         req.token = token;
         req.user = user;
         next();
