@@ -18,12 +18,12 @@ export default function Sign() {
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:8000/legalfiles", {
+            await axios.post("http://localhost:8000/signup", {
                 fullname, mobilenumber, password, cnfpassword
             })
                 .then(res => {
                     if (res.data == "signup") {
-                        navigate("/");
+                        navigate("/connectmeta");
                     }
                     else if (res.data == "notvalid") {
                         navigate("/login");

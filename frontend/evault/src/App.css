@@ -3,10 +3,10 @@
   box-sizing: border-box;
 }
 
-/* body,html{
+body,html{
   width: 100%;
   height: 100%;
-} */
+}
 
 /* Add this CSS to your style.css file */
   
@@ -146,4 +146,60 @@ h1, h2 {
 .centerflex{
   display: flex;
   justify-content: center;
+}
+
+.sidebar{
+  /* border: 2px solid black; */
+  width: 250px;
+  box-shadow: 0 10px 10px black; 
+  height: 100vh;
+  flex:0.2;
+  padding: 0 20px;
+  padding-top: 30px;
+  font-size: 20px;
+  min-width: 230px;
+}
+
+.sidebar_logo{
+  /* object-fit: contain; */
+  height: 75px;
+  padding: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  /* width: 100px; */
+}
+
+.sidebar_option{
+  background-color: white;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  transition: 200ms color  ease-in;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar_option:hover{
+  color:red
+}
+
+.sidebar_icon{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.sidebar_title,.playlists{
+  
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.sidebar >hr{
+  border: 1px solid #282828;
+  width: 90%;
+  margin: 10px auto;
+}
+.loggedContainer{
+  background-color: white;
 }

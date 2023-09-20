@@ -40,7 +40,7 @@ export default function Metaconnect() {
         else {
             if (window.ethereum) {
 
-                window.ethereum.request({ method: 'eth_requestAccounts', method: 'disconnect' })
+                window.ethereum.request({ method: 'eth_requestAccounts' })
                     .then(result => {
                         accountChanged([])
                     })

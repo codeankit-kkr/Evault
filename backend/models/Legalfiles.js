@@ -1,3 +1,4 @@
+require('dotenv').config()
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken")
@@ -45,9 +46,9 @@ legalFileSchema.methods.generateAuthToken = async function () {
 legalFileSchema.pre("save", async function (next) {
     if (this.isModified("password")) {
         // const passhash = await bcrypt.hash(this.password, 10);
-        const salt = bcrypt.genSalt(10);
-        this.password = await bcrypt.hash(this.password, salt);
-        this.confirmpassword = await bcrypt.hash(this.confirmpassword, salt);
+        // const salt = bcrypt.genSalt(10);
+        this.password = await bcrypt.hash(this.password, 10);
+        this.confirmpassword = await bcrypt.hash(this.confirmpassword, 10);
     }
     next();
 })

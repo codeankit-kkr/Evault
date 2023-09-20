@@ -23,7 +23,7 @@ export default function Login() {
                 .then(res => {
                     if (res.data == "login") {
                         console.log("haa bhai")
-                        navigate("/");
+                        navigate("/connectmeta");
                     }
                     else if (res.data == "notvalid") {
                         navigate("/login");

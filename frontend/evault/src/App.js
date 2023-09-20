@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Sign from './components/Sign';
 import Login from './components/Login';
 import Metaconnect from './components/Metaconnect';
+import LoggedinPage from './components/LoggedinPage';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/signup' element={<Sign />} />
           <Route path='/login' element={<Login />} />
           <Route path='/connectmeta' element={<Metaconnect />} />
+          <Route path='/loggedin' element={<LoggedinPage />} />
         </Routes>
       </Router>
     </div>

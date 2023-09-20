@@ -24,7 +24,7 @@ app.use(cookieparser())
 app.use(cors())
 
 
-app.post("/legalfiles", cors(), async (req, res) => {
+app.post("/signup", cors(), async (req, res) => {
     try {
         const password = req.body.password;
         const cpassword = req.body.cnfpassword;
