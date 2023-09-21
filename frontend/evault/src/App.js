@@ -10,6 +10,7 @@ import HomeLayout from './components/HomeLayout';
 import Profile from './components/Profile';
 import FAQ from './components/FAQ';
 import FileUpload from './components/FilesUpload';
+import Folder from './components/Folder';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/loggedin' element={<HomeLayout />} >
             <Route index element={<Profile />} />
             <Route path='faq' element={<FAQ />} />
+            <Route path='folder' element={<Folder />} />
             <Route path='fileupload' element={<FileUpload />} />
           </Route>
         </Routes>
